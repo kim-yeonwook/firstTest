@@ -24,5 +24,6 @@
 	</bean>
 	
 	<mybatis-spring:scan base-package="com.dogdrip.web.board.repository"/>
+	<mybatis-spring:scan base-package="com.dogdrip.web.user.repository"/>
 	
 </beans>

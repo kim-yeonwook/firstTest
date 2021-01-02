@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,8 +23,7 @@
 <input type="text" name="phone"><br>
 
 <input type="submit" value="회원가입">
-<a href="<c:url='/user/login'/>">취소</a>
-
 </form>
+<a href="<c:url value='/user/login'/>">취소</a>
 </body>
 </html>
