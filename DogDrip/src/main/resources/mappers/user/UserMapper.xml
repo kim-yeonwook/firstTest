@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="package com.dogdrip.web.user.repository.IUserMapper">
+
+<resultMap type="com.dogdrip.web.user.model.UserVO" id="UserMap">
+<id property="userId" column="user_id"/>
+<result property="password" column="password"/>
+<result property="name" column="name"/>
+<result property="phone" column="phone"/>
+<result property="email" column="email"/>
+<result property="regDate" column="reg_date"/>
+</resultMap>
+
+<insert id="signUpUser">
+insert into mvc_user (user_id, password, name, phone, email, reg_date) 
+values (#{userId}, #{password}, #{name}, #{phone}, #{email}, #{regDate})
+</insert>
+
+<select id="selectOne" resultMap="UserMap">
+select * from mvc_user
+where user_id = #{userId}
+</select>
+
+<select id="selectAll" resultMap="UserMap">
+select * from mvc_user
+</select>
+
+<delete id="delete">
+delete from mvc_user
+where user_id = #{userId}
+</delete>
+
+<select id="checkId" resultType="int">
+	select count(*) mvc_user
+	where user_id = #userId
+</select>
+
+</mapper>
