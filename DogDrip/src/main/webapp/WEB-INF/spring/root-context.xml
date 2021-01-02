@@ -17,6 +17,7 @@
 		<constructor-arg ref="hikariConfig"/>
 	</bean>
 	
+	<!-- Mapper 등록 -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="ds"/>
 		<property name="mapperLocations" value="classpath*:/mappers/**/*Mapper.xml"></property>

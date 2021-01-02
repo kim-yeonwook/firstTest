@@ -1,12 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+<jsp:include page="../include/header.jsp"/>
 
 <form action="<c:url value='/board/write'/>" method="post">
 	<input type="text" name="writer" value="${login.boardNo}" readonly><br>
@@ -15,5 +9,4 @@
 	<input type="submit" value="등록">
 </form>
 
-</body>
-</html>
+<jsp:include page="../include/footer.jsp"/>
