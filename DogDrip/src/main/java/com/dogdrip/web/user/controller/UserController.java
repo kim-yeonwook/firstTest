@@ -22,14 +22,14 @@ public class UserController {
 	private IUserService service;
 
 	
-	@GetMapping("signIn")
+	@GetMapping("signin")
 	public String signIn() {
 		System.out.println("/user/signin : GET");
 		
 		return "users/signin";
 	}
 	
-	@PostMapping("signIn")
+	@PostMapping("signin")
 	public String signIn(UserVO vo, HttpSession session,
 							Model model, RedirectAttributes ra) {
 		System.out.println("/user/signin : POST");
@@ -52,22 +52,24 @@ public class UserController {
 		return "redirct:/board/home";
 	}
 	
-	@GetMapping("signUp")
+	@GetMapping("signup")
 	public String signUp() {
 		System.out.println("/user/signup : GET");
 		
-		return "user/signup";
+		return "users/signup";
 	}
 	
-	@PostMapping("signUp")
-	public String signUp(UserVO vo) {
+	@PostMapping("signup")
+	public String signUp(@RequestBody UserVO user) {
 		System.out.println("/user/signup : POST");
+		String result = null;
 		
-		service.signUpUser(vo);
-		return "user/login";
+		
+		service.signUpUser(user);
+		return result;
 	}
 	
-	@PostMapping("checkId")
+	@PostMapping("checkid")
 	public String checkId(@RequestBody String userId) {
 		System.out.println("/user/checkid : POST");
 		String result = null;
