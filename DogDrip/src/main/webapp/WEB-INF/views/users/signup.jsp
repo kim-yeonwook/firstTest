@@ -12,7 +12,7 @@
 이름<br>
 <input type="text" name="name"><br>
 아이디<br>
-<input type="text" name="id"> <button></button><br>
+<input type="text" name="id"> <input type="button" class="checkId" value="중복체크"><br>
 비밀번호<br>
 <input type="password" name="password"><br>
 비밀번호 확인<br>
