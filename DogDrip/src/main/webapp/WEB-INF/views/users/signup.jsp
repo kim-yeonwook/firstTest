@@ -39,7 +39,7 @@ $(function(){
 	});
 	
 	//회원가입 버튼 클릭
-	$("userSignUp").click(function(){
+	$("#userSignUp").click(function(){
 		
 		const userId = $("userId").val();
 		const password = $("password").val();
@@ -76,7 +76,7 @@ $(function(){
 	});
 	
 	//취소 버튼 클릭
-	$("userSignUpCancle").click(function(){
+	$("#userSignUpCancle").click(function(){
 		
 		
 		

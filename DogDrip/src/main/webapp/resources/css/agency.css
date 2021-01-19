@@ -3,3 +3,30 @@
 table.layout{
 	border : 1px solid black;
 }
+
+.hide ul{
+	display : none;
+}
+
+.ulCss{
+	list-style: none;
+    margin: 0px;
+    padding: 0px;
+  
+  	min-width : 300px;
+    max-width: 250px;
+    width: 100%;
+}
+
+.menu{
+	display : inline-flex;
+}
+
+.menu ul ul{
+	display : none;
+	position : absolute;
+}
+.menu ul ul li{
+	display : block;
+	background-color : navy; color : white;
+}
